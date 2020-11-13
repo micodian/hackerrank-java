@@ -17,14 +17,27 @@ public class Stacks {
 
     public long pop(){
         //....
-        int old_top = top;
-        top--;
-        return stackArray[old_top];
+        if (isEmpty()) {
+            System.out.println("stack is empty, Please add to stack");
+            return -1;
+        }
+        else{
+            int old_top = top;
+            top--;
+            return stackArray[old_top];
+        }
+       
     }
 
     public void push(int value){
-        top++;
+        if (isFull()) {
+            System.out.println("stack is full, unable to add the value: "+ value);
+            
+        } else {
+            top++;
         stackArray[top]= value;
+        }
+        
 
     }
 

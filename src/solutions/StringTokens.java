@@ -1,3 +1,5 @@
+package solutions;
+
 public class StringTokens {
     
 public void regexToken(){

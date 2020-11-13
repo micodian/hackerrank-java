@@ -1,3 +1,5 @@
+package solutions;
+
 public class Anagrams {
 
     public static boolean isAnagram(String a, String b) {
