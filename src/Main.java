@@ -1,3 +1,4 @@
+import DataStructures.CircularLinkedList;
 import DataStructures.LinkedList;
 import DataStructures.Node;
 
@@ -13,14 +14,17 @@ public class Main {
         // nodeA.next = nodeB;
         // nodeB.next = nodeC;
 
-        LinkedList meList = new LinkedList();
+        CircularLinkedList myList = new CircularLinkedList();
+        myList.insertFirst(35);
+        myList.insertFirst(350);
+        myList.insertFirst(3500);
+        myList.insertFirst(35000);
+        myList.insertFirst(350000);
 
-        meList.insertFirst(100);
-        meList.insertFirst(1001);
-        meList.insertFirst(1002);
-        meList.insertFirst(1003);
 
-        meList.displayList();
+       myList.displayList();
+       System.out.println();
+       myList.displayLastInlist();
         
         
         
