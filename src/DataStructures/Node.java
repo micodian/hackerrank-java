@@ -5,10 +5,10 @@ public class Node {
     public Node next = null;
 
 
-    public Node (int data){
 
-        this.data = data;
+    public void displayNode(){
 
+        System.out.println("{ " + data + " } ");
     }
     
 }
