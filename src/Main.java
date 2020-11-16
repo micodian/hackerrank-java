@@ -1,28 +1,36 @@
-import java.util.Arrays;
+import DataStructures.Node;
 
-import DataStructures.Queue;
-import DataStructures.Stacks;
-
-public class Main  {
+public class Main {
 
     
     public static void main(String[] args) {
 
-        
-       Queue myQueue = new Queue(5);
-       myQueue.insert(32);
-       myQueue.insert(35);
-       myQueue.insert(399);
-       myQueue.insert(35888);
-       myQueue.insert(35888);
+        Node nodeA = new Node(12);
+        Node nodeB = new Node(21);
+        Node nodeC = new Node(30);
 
-      
-      System.out.println(myQueue.isFull()); 
-      myQueue.insert(35888);
+        nodeA.next = nodeB;
+        nodeB.next = nodeC;
 
-       
 
-       
+        System.out.println(listOfNodes(nodeB));
+
+    
+    }
+
+    public static int listOfNodes(Node startNode){
+        int count = 1;
+        Node current = startNode;
+
+        while (current.next != null) {
+            
+            current = current.next;
+            count ++;
+            
+        }
+
+        return count;
+
     }
     
 }
